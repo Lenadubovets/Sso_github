@@ -27,9 +27,9 @@ This repository provides a Laravel application with GitHub Single Sign-On (SSO) 
 
     Click on "New OAuth App" and fill in the details:
 
-    - Application Name: Your app name
-      -Homepage URL: The URL of your Laravel app
-      -Authorization callback URL: {ngrok-url}/login/github/callback
+    -   Application Name: Your app name
+        -Homepage URL: The URL of your Laravel app
+        -Authorization callback URL: {ngrok-url}/login/github/callback
 
     After creating the app, note down the Client ID and Client Secret.
 
@@ -48,6 +48,7 @@ This repository provides a Laravel application with GitHub Single Sign-On (SSO) 
 
 7.  Update environment variables
     In the .env file, add the following lines and fill in the values you obtained from the GitHub OAuth application:
+
     GITHUB_CLIENT_ID=your-github-client-id
     GITHUB_CLIENT_SECRET=your-github-client-secret
     GITHUB_REDIRECT_URI={ngrok-url}/login/callback
@@ -56,13 +57,13 @@ This repository provides a Laravel application with GitHub Single Sign-On (SSO) 
 
 1. Create the following routes in routes/web.php:
 
-Route::get('/logingit', function () {
-return Socialite::driver('github')->redirect();
-})->name('logingit');
+    Route::get('/logingit', function () {
+    return Socialite::driver('github')->redirect();
+    })->name('logingit');
 
-Route::get('/login/callback', function () {
-$user = Socialite::driver('github')->user();
-    dd($user);
+    Route::get('/login/callback', function () {
+    $user = Socialite::driver('github')->user();
+     dd($user);
 
     // Handle the authenticated user
     // e.g., create a new user or log in an existing user
@@ -71,4 +72,4 @@ $user = Socialite::driver('github')->user();
     // Redirect the user to the desired location
     return redirect('/dashboard');
 
-})->name('login.callback');
+    })->name('login.callback');
