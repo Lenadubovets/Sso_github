@@ -73,3 +73,6 @@ This repository provides a Laravel application with GitHub Single Sign-On (SSO) 
     return redirect('/dashboard');
 
     })->name('login.callback');
+
+  <p class="has-line-data" data-line-start="5" data-line-end="6">To get started with the app, clone the repository and install the dependencies:</p>
+<pre><code class="has-line-data" data-line-start="8" data-line-end="12" class="language-sh">git <span class="hljs-built_in">clone</span> https://github.com/Lenadubovets/Sso_github
