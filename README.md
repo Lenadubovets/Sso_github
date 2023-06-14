@@ -1,5 +1,21 @@
 ## GitHub SSO-enabled Laravel Application
 
+# GitHub SSO-enabled Laravel Application
+
+This repository provides a Laravel application with GitHub Single Sign-On (SSO) integration. The application allows users to log in using their GitHub accounts.
+
+## Prerequisites
+
+-   [ngrok](https://ngrok.com) - A tool for exposing local servers over the internet.
+
+## Installation
+
+1. Start ngrok to expose your local Laravel app:
+
+    ```bash
+    ngrok http 8000
+    ```
+
 1.Start ngrok
 
 -   [visit](https://ngrok.com).
